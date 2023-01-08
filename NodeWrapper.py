@@ -47,7 +47,7 @@ class Node:
 		return get_boxId_byIdBinary 
 
 	def get_transaction_byId(self,txId):
-		get_transaction_byId = requests.get(f'{self.req_url}wallet/transactionById?={txId}',headers = self.header).json()
+		get_transaction_byId = requests.get(f'{self.req_url}wallet/transactionById?id={txId}',headers = self.header).json()
 		return get_transaction_byId
 
 	def get_address_ergotree(self):
