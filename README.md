@@ -20,3 +20,7 @@ Node(api key,wallet password,node address,node ip)
 **.get_transaction_byId(txId)** - returns tx by transaction id
 
 **.get_address_ergotree** - returns ergo tree of node address
+
+**.get_unconfirmed_transaction_byId(txId)** - returns unconfirmed tx by transaction id
+
+**.ergoTreeToAddress** - returns address from ergoTree
