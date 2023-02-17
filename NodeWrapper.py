@@ -54,7 +54,10 @@ class Node:
 		get_address_ergotree = requests.get(f'{self.req_url}utils/addressToRaw/{self.node_address}',headers = self.header).json()['raw']  
 		return '0008cd'+ get_address_ergotree
 
+	def get_unconfirmed_transaction_byId(self,txId):
+		get_transaction_byId = requests.get(f'{self.req_url}transactions/unconfirmed/byTransactionId/{txId}',headers = self.header).json()
+		return get_transaction_byId
 
-
-
-
+	def ergoTreeToAddress(self,ergoTree):
+		get_ergoTreeToAddress = requests.get(f'{self.req_url}utils/ergoTreeToAddress/{ergoTree}',headers = self.header).json()
+		return get_ergoTreeToAddress
